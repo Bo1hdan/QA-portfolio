@@ -1,11 +1,10 @@
 # Trello API Testing Project  
-*Author: Bohdan Mamlai*  
-*Date: [YYYY-MM-DD]*  
+
 
 ---
 
 ## Project Overview  
-This project demonstrates API testing of the :contentReference[oaicite:0]{index=0} using :contentReference[oaicite:1]{index=1}. It contains eight tasks that cover the full CRUD lifecycle for boards, lists, and cards — from creation, updating, deletion, to retrieval.  
+This project demonstrates API testing of the: content Reference[oaicite:0]{index=0} using: content Reference[oaicite:1]{index=1}. It contains eight tasks that cover the full CRUD lifecycle for boards, lists, and cards — from creation, updating, deletion, to retrieval.  
 The goal was to show proficiency in functional and negative API testing, use of environment variables, and clear documentation of test cases and results.
 
 ---
