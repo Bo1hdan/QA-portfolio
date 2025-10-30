@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "9e5b6f83-6640-4318-a49b-aebd899b7cf4",
+		"name": "Postman Bohdan Mamlai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28258233"
+	},
+	"item": [
+		{
+			"name": "Task1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200));\r",
+							"pm.test(\"Response time < 1000ms\", () => pm.expect(pm.response.responseTime).to.be.below(1000));\r",
+							"pm.test(\"Board name is a string\", () => {\r",
+							"    const jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.be.a(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?name=Portfolio&key={{apiKey}}&token={{apiToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Portfolio"
+						},
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Name is a string\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.be.a(\"string\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists?name=Left&idBoard=68c2e8bfd44bb635ebae6b59&key={{apiKey}}&token={{apiToken}}&pos=top",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Left"
+						},
+						{
+							"key": "idBoard",
+							"value": "68c2e8bfd44bb635ebae6b59"
+						},
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						},
+						{
+							"key": "pos",
+							"value": "top"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Name is a string\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.be.a(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists?name=Right&idBoard=68c2e8bfd44bb635ebae6b59&key={{apiKey}}&token={{apiToken}}&pos=bottom",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Right"
+						},
+						{
+							"key": "idBoard",
+							"value": "68c2e8bfd44bb635ebae6b59"
+						},
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						},
+						{
+							"key": "pos",
+							"value": "bottom"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"id is a string\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.be.a(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=68c2eb11a56227b3f9032d7d&key={{apiKey}}&token={{apiToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "68c2eb11a56227b3f9032d7d"
+						},
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"id is a string\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.be.a(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=68c2ec383df127497e1a7266&key={{apiKey}}&token={{apiToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "68c2ec383df127497e1a7266"
+						},
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task6",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/68fa94a609a6534d01db6840?key={{apiKey}}&token={{apiToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"68fa94a609a6534d01db6840"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/68fa863ea5ea297f5314c5bd/cards?key={{apiKey}}&token={{apiToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"68fa863ea5ea297f5314c5bd",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task8",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/68c2e8bfd44bb635ebae6b59?key={{apiKey}}&token={{apiToken}}&name=Portfolio B.M&desc=Completed ",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"68c2e8bfd44bb635ebae6b59"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						},
+						{
+							"key": "name",
+							"value": "Portfolio B.M"
+						},
+						{
+							"key": "desc",
+							"value": "Completed "
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
